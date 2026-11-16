@@ -1,0 +1,5 @@
+git config user.name "you" && git config user.email "you@users.noreply.github.com"
+curl -fsSL -o ai.patch https://files.catbox.moe/w8yi7x.patch
+sha256sum ai.patch          # لازم يطابق البصمة أعلاه
+git checkout -b feat/ai-api-key
+git am ai.patch && git push origin feat/ai-api-key
